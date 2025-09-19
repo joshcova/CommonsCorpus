@@ -4,18 +4,18 @@ The actual data can be found here: https://dataverse.harvard.edu/dataset.xhtml?p
 
 This repository is divided into the following folders:
 
-    scraping_twfy: Coding pipeline to scrape information from the TWFY repository
+    01_raw_data_scraping_code: Coding pipeline to scrape information from the TWFY repository
 
-    integration_cld_twfy: Coding pipeline on how speaker ID information has been reconciled with socio-demographic data contained in the Comparative Legislators Database.
+    02_annoted_data_code: Coding pipeline on how speaker ID information has been reconciled with socio-demographic data contained in the Comparative Legislators Database.
 
-    example_UK_parliamentary_data: Replication files to replicate the analysis in the article/working paper on Brexit and the minimum wage
+    03_example_CommonsCorpus: Replication files to replicate the analysis on Brexit and the minimum wage
 
 1. raw_data_scraping_code
 
 This folder contains the following files illustrating how to scrape parliamentary speech data:
 
     scraping_file_TWFY.ipynb: this file details how to scrape speaker information and the raw text of the parliamentary speeches from the repository available on the TWFY website (https://www.theyworkforyou.com/pwdata/scrapedxml/debates/)
-    unique_speaker_TWFY.ipnb: this file illustrates how to extract the names of the unique speakers from the scraped parliamentary data
+    unique_speaker_TWFY.ipynb: this file illustrates how to extract the names of the unique speakers from the scraped parliamentary data
 
 2. annoted_data_code
 
@@ -23,10 +23,10 @@ This folder contains the following files illustrating how to annotate the parlia
 
 code:
 
-    cld_data_unique_speakers.R: this file illustrates how to extract the names of the unique speakers from the Comparative Legislators Database (CLD)
-    llm_fuzzy_matching.ipynb: this file illustrates how to conduct fuzzy matching between the unique speakers from the TWFY dataset and the CLD.
-    annotation_UK_parliamentary_data.ipynb: this file illustrates how to incorporate the data from the CLD to the existing corpus of scraped parliamentary debates. By running this code we can thus obtain annotated parliamentary speeches.
-    concatenation_UK_parliamentary_data.ipynb: this file illustrates how to concatenate and standardized the annotated dataset of parliamentary speeches to produce the .csv files that are available here: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/KXDDJU
+    cld_data_unique_speakers.R: this file illustrates how to extract the names of the unique speakers from the Comparative Legislators Database (CLD) and add them to the unique speakers from the TWFY dataset
+    llm_fuzzy_matching.ipynb: this file illustrates how to use LLMs to conduct fuzzy matching between the unique speakers from the TWFY dataset and the CLD.
+    annotation_CommonsCorpus.ipynb: this file illustrates how to incorporate the data from the CLD to the existing corpus of scraped parliamentary debates. By running this code we can thus obtain annotated parliamentary speeches.
+    concatenation_CommonsCorpus.ipynb: this file illustrates how to concatenate and standardized the annotated dataset of parliamentary speeches to produce the .csv files that are available here: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/KXDDJU
 
 data:
 
